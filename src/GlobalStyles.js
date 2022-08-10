@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
+    color: white;
   }
 
   div {
