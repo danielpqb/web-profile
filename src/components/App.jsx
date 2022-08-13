@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { GlobalStyle } from "../GlobalStyles"
 import UserContext from '../Context/UserContext'
 
-import Home from "./Home";
+import Home from "./Screens/Home";
+import Portfolio from "./Screens/Portfolio";
 
 export default function App() {
   return (
@@ -12,7 +13,11 @@ export default function App() {
         <UserContext.Provider value={{}}>
           <GlobalStyle />
           <Routes>
-            <Route path="/" element={<><Home /><Home /></>}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about-me" element={<></>}></Route>
+            <Route path="/cv" element={<></>}></Route>
+            <Route path="/portfolio" element={<Portfolio />}></Route>
+            <Route path="/contact" element={<></>}></Route>
           </Routes>
         </UserContext.Provider>
       </BrowserRouter>

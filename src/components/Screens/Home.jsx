@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-import background from '../assets/img/background.webp'
-import ProfilePhoto from "./ProfilePhoto"
+import background from '../../assets/img/background.jpg'
+import ProfilePhoto from "../ProfilePhoto"
 
-import Header from "./Header"
-import ContactLinks from "./ContactLinks"
+import Header from "../Header"
+import ContactLinks from "../ContactLinks"
 
 export default function Home() {
   return (
