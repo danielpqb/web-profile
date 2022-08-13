@@ -25,11 +25,11 @@ const Container = styled.div`
     width: calc(100vw - (100vw - 100%));
     height: 100vh;
 
-    background-image: ${({ img }) => (`url(${img})`)};
+    /* background-image: ${({ img }) => (`url(${img})`)}; */
+    background-color: rgba(15, 15, 15, 0.99);
     background-size: cover;
 
     padding: 20px;
-    padding-top: 100px;
   }
 `
 

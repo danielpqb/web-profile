@@ -5,28 +5,28 @@ export default function ContactLinks() {
     const links = [
         {
             href: "https://github.com/danielpqb",
-            src: "./img/logo-github.svg",
-            alt: "danielpqb",
+            name: "logo-github",
+            title: "danielpqb",
         },
         {
             href: "https://www.linkedin.com/in/daniel-pq-barros",
-            src: './img/logo-linkedin.svg',
-            alt: "daniel-pq-barros",
+            name: 'logo-linkedin',
+            title: "daniel-pq-barros",
         },
         {
             href: "https://discord.com/users/274740926524686336",
-            src: './img/logo-discord.svg',
-            alt: "Daniel Barros#5145",
+            name: 'logo-discord',
+            title: "Daniel Barros#5145",
         },
         {
             href: "https://www.instagram.com/danielpqb/",
-            src: './img/logo-instagram.svg',
-            alt: "danielpqb",
+            name: 'logo-instagram',
+            title: "danielpqb",
         },
         {
             href: "https://www.facebook.com/danielpqb/",
-            src: './img/logo-facebook.svg',
-            alt: "danielpqb",
+            name: 'logo-facebook',
+            title: "danielpqb",
         },
     ]
 
@@ -34,8 +34,8 @@ export default function ContactLinks() {
         <Container>
             {links.map((value, index) => {
                 return (
-                    <a key={index} href={value.href} target="_blank" rel="noreferrer">
-                        <img alt={value.alt} src={value.src} />
+                    <a href={value.href} title={value.title} key={index} target="_blank" rel="noreferrer">
+                        <ion-icon name={value.name}></ion-icon>
                     </a>
                 )
             })}
@@ -48,12 +48,12 @@ const Container = styled.div`
     height: 50px;
   }
 
-  img {
-    height: 40px;
-    width: 40px;
+  ion-icon {
+    font-size: 35px;
+    color: rgba(0, 65, 160, 0.7);
 
     padding: 5px;
 
-    filter: contrast(0) brightness(10);
+    pointer-events: none;
   }
 `

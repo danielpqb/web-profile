@@ -11,7 +11,7 @@ export default function MyTable({ headers, lines }) {
                 </td>
                 <td>
                     <a href={repo.href}>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original.svg" alt="" />
+                        <ion-icon name="logo-github"></ion-icon>
                     </a>
                 </td>
                 <td>{description}</td>
@@ -58,12 +58,15 @@ const Container = styled.table`
     object-fit: contain;
   }
 
+  ion-icon {
+    font-size: 35px;
+  }
+
   a {
     color: rgb(176, 197, 255);
   }
 
   td {
-    background-color: rgba(255, 255, 255, 0.2);
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 4px solid rgba(255, 255, 255, 0.7);

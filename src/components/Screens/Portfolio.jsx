@@ -4,13 +4,14 @@ import background from '../../assets/img/background.jpg'
 
 import Header from "../Header"
 import MyTable from "../MyTable"
+import SectionBreaker from "../SectionBreaker"
 
 export default function Portfolio() {
   return (
     <Container img={background}>
       <Header />
 
-      <h1>Projects</h1>
+      <SectionBreaker>Projects</SectionBreaker>
       <MyTable
         headers={[
           'Deploy',
@@ -54,7 +55,7 @@ export default function Portfolio() {
         ]}
       />
 
-      <h1>Github Stats</h1>
+      <SectionBreaker>Github Stats</SectionBreaker>
       <GitStats>
         <a href="http://www.github.com/danielpqb">
           <img src="https://github-readme-stats.vercel.app/api?username=danielpqb&amp;show_icons=true&amp;hide=&amp;count_private=true&amp;title_color=3382ed&amp;text_color=ffffff&amp;icon_color=3382ed&amp;bg_color=171717&amp;hide_border=true&amp;show_icons=true" alt="" />
@@ -82,13 +83,14 @@ const Container = styled.div`
     width: calc(100vw - (100vw - 100%));
     min-height: 100vh;
 
-    background-image: ${({ img }) => (`url(${img})`)};
+    /* background-image: ${({ img }) => (`url(${img})`)}; */
+    background-color: rgba(15, 15, 15, 0.99);
     background-size: cover;
 
     flex-direction: column;
+    justify-content: flex-start;
 
     padding: 20px;
-    padding-top: 100px;
   }
 `
 
@@ -98,12 +100,7 @@ const GitStats = styled.div`
   }
 
   a {
-    height: 165px;
+    height: 175px;
     padding: 5px;
-  }
-
-  img {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
   }
 `
