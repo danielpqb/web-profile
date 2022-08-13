@@ -4,7 +4,7 @@ import styled from "styled-components"
 export default function Header() {
   return (
     <Container>
-      <div><Link to={'/about-me'}>About Me</Link></div>
+      <div><Link to={'/'}>About Me</Link></div>
       <div><Link to={'/cv'}>CV</Link></div>
       <div><Link to={'/portfolio'}>Portfolio</Link></div>
       <div><Link to={'/contact'}>Contact</Link></div>

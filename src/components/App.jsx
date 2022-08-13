@@ -14,7 +14,6 @@ export default function App() {
           <GlobalStyle />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/about-me" element={<></>}></Route>
             <Route path="/cv" element={<></>}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
             <Route path="/contact" element={<></>}></Route>

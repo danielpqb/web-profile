@@ -27,6 +27,9 @@ const Container = styled.div`
 
     background-image: ${({ img }) => (`url(${img})`)};
     background-size: cover;
+
+    padding: 20px;
+    padding-top: 100px;
   }
 `
 

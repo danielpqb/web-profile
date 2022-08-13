@@ -11,8 +11,6 @@ export default function Portfolio() {
       <Header />
 
       <h1>Projects</h1>
-      <ion-icon name="chevron-down" role="img" class="md hydrated" aria-label="chevron down"></ion-icon>
-
       <MyTable
         headers={[
           'Deploy',
@@ -56,6 +54,25 @@ export default function Portfolio() {
         ]}
       />
 
+      <h1>Github Stats</h1>
+      <GitStats>
+        <a href="http://www.github.com/danielpqb">
+          <img src="https://github-readme-stats.vercel.app/api?username=danielpqb&amp;show_icons=true&amp;hide=&amp;count_private=true&amp;title_color=3382ed&amp;text_color=ffffff&amp;icon_color=3382ed&amp;bg_color=171717&amp;hide_border=true&amp;show_icons=true" alt="" />
+        </a>
+
+        <a href="http://www.github.com/danielpqb">
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=danielpqb&amp;stroke=ffffff&amp;background=171717&amp;ring=3382ed&amp;fire=3382ed&amp;currStreakNum=ffffff&amp;currStreakLabel=3382ed&amp;sideNums=ffffff&amp;sideLabels=ffffff&amp;dates=ffffff&amp;hide_border=true" alt="" />
+        </a>
+
+        <a href="https://github.com/danielpqb">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=danielpqb&amp;layout=compact&amp;title_color=3382ed&amp;text_color=ffffff&amp;icon_color=3382ed&amp;bg_color=171717&amp;hide_border=true&amp;locale=en&amp;custom_title=Top%20%Languages" alt="" />
+        </a>
+      </GitStats>
+
+      <a href="https://github.com/danielpqb?tab=followers" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/github/followers/danielpqb?logo=github&amp;style=for-the-badge&amp;color=3382ed&amp;labelColor=171717" alt="" />
+      </a>
+
     </Container>
   )
 };
@@ -63,7 +80,7 @@ export default function Portfolio() {
 const Container = styled.div`
   & {
     width: calc(100vw - (100vw - 100%));
-    height: 100vh;
+    min-height: 100vh;
 
     background-image: ${({ img }) => (`url(${img})`)};
     background-size: cover;
@@ -71,5 +88,22 @@ const Container = styled.div`
     flex-direction: column;
 
     padding: 20px;
+    padding-top: 100px;
+  }
+`
+
+const GitStats = styled.div`
+  & {
+    flex-wrap: wrap;
+  }
+
+  a {
+    height: 165px;
+    padding: 5px;
+  }
+
+  img {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
   }
 `
