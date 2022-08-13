@@ -28,6 +28,16 @@ export default function ContactLinks() {
             name: 'logo-facebook',
             title: "danielpqb",
         },
+        {
+            href: "mailto:danielpqb@gmail.com",
+            name: 'mail-outline',
+            title: "danielpqb@gmail.com",
+        },
+        {
+            href: "https://wa.me/5521994149949",
+            name: 'logo-whatsapp',
+            title: "+55 21 9 9414-9949",
+        },
     ]
 
     return (
@@ -48,9 +58,13 @@ const Container = styled.div`
     height: 50px;
   }
 
+  img {
+    max-width: 40px;
+  }
+
   ion-icon {
     font-size: 35px;
-    color: rgba(0, 65, 160, 0.7);
+    color: rgba(255, 255, 255, 0.9);
 
     padding: 5px;
 

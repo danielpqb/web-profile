@@ -45,6 +45,10 @@ export const GlobalStyle = createGlobalStyle`
     color: black;
   }
 
+  a:hover {
+    opacity: 0.6;
+  }
+
   img {
     width: 100%;
     height: 100%;
