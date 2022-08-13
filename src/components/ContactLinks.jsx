@@ -56,6 +56,7 @@ export default function ContactLinks() {
 const Container = styled.div`
   & {
     height: 50px;
+    margin: 10px 0px;
   }
 
   img {

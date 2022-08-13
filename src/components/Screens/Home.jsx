@@ -13,7 +13,7 @@ export default function Home() {
       <Info>
         <ProfilePhoto />
         <h1>Daniel Barros</h1>
-        <h2>Web Dev</h2>
+        <h2>Full Stack Software Engineer Developer</h2>
         <ContactLinks />
       </Info>
     </Container>
@@ -46,6 +46,7 @@ const Info = styled.div`
   }
   
   h2 {
-    font-size: 26px;
+    font-size: 18px;
+    font-style: italic;
   }
 `
