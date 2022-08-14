@@ -266,10 +266,17 @@ const Skills = styled.div`
   }
 `
 
-const Text = styled.div`
+const Text = styled.h1`
   & {
-    display: flex;
-    justify-content: flex-start;
-    white-space: pre;
+    width: 100%;
+    text-align: start;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  i {
+    font-style: italic;
   }
 `
