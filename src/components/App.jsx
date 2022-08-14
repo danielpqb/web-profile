@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { GlobalStyle } from "../GlobalStyles"
 import UserContext from '../Context/UserContext'
 
+import background from '../assets/img/background.jpg'
+
 import Home from "./Screens/Home";
 import Portfolio from "./Screens/Portfolio";
 import CV from "./Screens/CV";
 
 export default function App() {
   return (
-    <Container>
+    <Container img={background}>
       <BrowserRouter>
         <UserContext.Provider value={{}}>
           <GlobalStyle />
@@ -27,6 +29,9 @@ export default function App() {
 
 const Container = styled.div`
   & {
+    /* background-image: ${({ img }) => (`url(${img})`)}; */
+    background-color: rgba(15, 15, 15, 0.99);
+    
     flex-direction: column;
   }
 `

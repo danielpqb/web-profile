@@ -1,14 +1,12 @@
 import styled from "styled-components"
 
-import background from '../../assets/img/background.jpg'
-
 import Header from "../Header"
 import MyTable from "../MyTable"
 import SectionBreaker from "../SectionBreaker"
 
 export default function Portfolio() {
   return (
-    <Container img={background}>
+    <Container>
       <Header />
 
       <SectionBreaker>Projects</SectionBreaker>
@@ -80,12 +78,8 @@ export default function Portfolio() {
 
 const Container = styled.div`
   & {
-    width: calc(100vw - (100vw - 100%));
+    width: calc(70vw - (100vw - 100%));
     min-height: 100vh;
-
-    /* background-image: ${({ img }) => (`url(${img})`)}; */
-    background-color: rgba(15, 15, 15, 0.99);
-    background-size: cover;
 
     flex-direction: column;
     justify-content: flex-start;

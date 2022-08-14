@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <Info>
         <ProfilePhoto />
-        <h1>Daniel Barros</h1>
+        <h1>Daniel P. Q. Barros</h1>
         <h2>Full Stack Software Engineer Developer</h2>
         <ContactLinks />
       </Info>
@@ -42,7 +42,7 @@ const Info = styled.div`
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 45px;
   }
   
   h2 {

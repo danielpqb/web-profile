@@ -13,8 +13,8 @@ export default function ProfilePhoto() {
 const Container = styled.div`
   & {
     padding: 15px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   img {

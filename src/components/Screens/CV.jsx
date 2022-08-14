@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import background from '../../assets/img/background.jpg'
-
 import Header from "../Header"
 import Language from "../Language"
 import SectionBreaker from "../SectionBreaker"
@@ -193,31 +191,41 @@ export default function CV() {
   ]
 
   return (
-    <Container img={background}>
+    <Container>
 
       <Header />
 
       <SectionBreaker>Academic Background</SectionBreaker>
-      <Text><strong>Instituto Brasileiro de Mercado de Capitais IBMEC</strong> – RJ, Brazil</Text>
-      <Text>BS Production Engineering</Text>
+      <Text>
+        <h1>IBMEC<em> – RJ, Brazil</em></h1>
+        <h2>BS Production Engineering</h2>
+      </Text>
 
       <SectionBreaker>Professional Experience</SectionBreaker>
-      <Text><strong>Oficina Design</strong> – RJ, Brazil</Text>
-      <Text><i>Entrepreneur</i></Text>
+      <Text>
+        <h1>Oficina Design<em> – RJ, Brazil</em></h1>
+        <h2>Entrepreneur</h2>
+      </Text>
+      <br />
 
-      <Text><strong>Estúdio OBJ</strong> – RJ, Brazil</Text>
-      <Text><i>Production Analyst</i></Text>
-      <Text>• Product traceability with the creation and implementation of documents and verification tools.</Text>
-      <Text>• Discrimination of the production stages, and elaboration of the quality control of the products by process.</Text>
-      <Text>• Installation of methods for reusing unfinished or skewed parts.</Text>
-      <Text>• Development of technological solutions for inventory control and management, purchases of materials and equipment, and production planning and control.</Text>
+      <Text>
+        <h1>Estúdio OBJ<em> – RJ, Brazil</em></h1>
+        <h2>Production Analyst</h2>
+        <h3>• Product traceability with the creation and implementation of documents and verification tools.</h3>
+        <h3>• Discrimination of the production stages, and elaboration of the quality control of the products by process.</h3>
+        <h3>• Installation of methods for reusing unfinished or skewed parts.</h3>
+        <h3>• Development of technological solutions for inventory control and management, purchases of materials and equipment, and production planning and control.</h3>
+      </Text>
+      <br />
 
       <SectionBreaker>Courses</SectionBreaker>
-      <Text><strong>BI and Data Warehouse with SQL Server and Power BI</strong> – Alura</Text>
-      <Text><strong>Python for Data Science</strong> – Alura</Text>
-      <Text><strong>Python, C++, SQL and Java</strong> – Codecademy, Udemy and W3Schools</Text>
-      <Text><strong>Fixed Incomes (Treasury bonds, CD and debentures)</strong> – XPInvestimentos</Text>
-      <Text><strong>Master I (English proficiency)</strong> – Cultura Inglesa</Text>
+      <Text>
+        <h2>BI and Data Warehouse with SQL Server and Power BI<em> – Alura</em></h2><br />
+        <h2>Python for Data Science<em> – Alura</em></h2><br />
+        <h2>Python, C++, SQL and Java<em> – Codecademy, Udemy and W3Schools</em></h2><br />
+        <h2>Fixed Incomes (Treasury bonds, CD and debentures)<em> – XPInvestimentos</em></h2><br />
+        <h2>Master I (English proficiency)<em> – Cultura Inglesa</em></h2>
+      </Text>
 
       <SectionBreaker>Main Skills</SectionBreaker>
       <Skills>
@@ -234,7 +242,7 @@ export default function CV() {
       </Skills>
 
       <SectionBreaker>Languages</SectionBreaker>
-      <Language level={90}>English</Language>
+      <Language level={80}>English</Language>
       <Language level={100}>Portuguese</Language>
       <Language level={50}>Spanish</Language>
       <Language level={20}>Japanese</Language>
@@ -246,12 +254,8 @@ export default function CV() {
 
 const Container = styled.div`
   & {
-    width: calc(100vw - (100vw - 100%));
+    width: calc(70vw - (100vw - 100%));
     min-height: 100vh;
-
-    /* background-image: ${({ img }) => (`url(${img})`)}; */
-    background-color: rgba(15, 15, 15, 0.99);
-    background-size: cover;
 
     flex-direction: column;
     justify-content: flex-start;
@@ -266,17 +270,31 @@ const Skills = styled.div`
   }
 `
 
-const Text = styled.h1`
+const Text = styled.div`
   & {
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
     text-align: start;
+    white-space: pre-wrap;
   }
 
-  strong {
+  * {
+    display: flex;
+    align-items: center;
+    font-family: 'Calibri';
+  }
+
+  h1 {
+    font-size: 24px;
     font-weight: bold;
   }
 
-  i {
+  h2 {
+    font-size: 20px;
     font-style: italic;
+  }
+
+  h3 {
   }
 `
