@@ -261,6 +261,10 @@ const Container = styled.div`
     justify-content: flex-start;
 
     padding: 20px;
+
+    @media (max-width: 1100px) {
+      width: calc(100vw - (100vw - 100%));
+    }
   }
 `
 
@@ -286,12 +290,12 @@ const Text = styled.div`
   }
 
   h1 {
-    font-size: 24px;
+    font-size: calc(var(--fontsize) + 6px);
     font-weight: bold;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: calc(var(--fontsize) + 2px);
     font-style: italic;
   }
 

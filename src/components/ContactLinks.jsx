@@ -64,7 +64,7 @@ const Container = styled.div`
   }
 
   ion-icon {
-    font-size: 35px;
+    font-size: calc(var(--fontsize) + 17px);
     color: rgba(255, 255, 255, 0.9);
 
     padding: 5px;

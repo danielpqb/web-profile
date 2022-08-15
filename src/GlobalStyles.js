@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`  
+export const GlobalStyle = createGlobalStyle`
+  :root {
+    --fontsize: 18px;
+  }
+
   * {
     background: none;
     border: none;
@@ -13,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Lexend Deca';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--fontsize);
     color: white;
   }
 
@@ -52,5 +56,11 @@ export const GlobalStyle = createGlobalStyle`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 1100px) {
+    * {
+      font-size: calc(var(--fontsize) - 4px);
+    }
   }
 `;

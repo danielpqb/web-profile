@@ -52,14 +52,14 @@ const Container = styled.table`
   }
 
   img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 34px;
+    max-height: 34px;
     vertical-align: middle;
     object-fit: contain;
   }
 
   ion-icon {
-    font-size: 35px;
+    font-size: calc(var(--fontsize) + 12px);
   }
 
   a {

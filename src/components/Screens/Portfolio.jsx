@@ -85,6 +85,10 @@ const Container = styled.div`
     justify-content: flex-start;
 
     padding: 20px;
+
+    @media (max-width: 1100px) {
+      width: calc(100vw - (100vw - 100%));
+    }
   }
 `
 
@@ -97,4 +101,14 @@ const GitStats = styled.div`
     height: 175px;
     padding: 5px;
   }
+
+  @media (max-width: 1100px) {
+    & {
+      flex-direction: column;
+    }
+
+    a {
+      height: auto;
+    }
+  }  
 `

@@ -19,7 +19,7 @@ const Container = styled.div`
     margin-bottom: 20px;
     padding: 10px;
 
-    font-size: 20px;
+    font-size: calc(var(--fontsize) + 2px);
     font-weight: bold;
   }
 `

@@ -19,7 +19,6 @@ export default function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/cv" element={<CV />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
-            <Route path="/contact" element={<Home />}></Route>
           </Routes>
         </UserContext.Provider>
       </BrowserRouter>

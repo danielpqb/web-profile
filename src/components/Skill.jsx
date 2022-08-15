@@ -43,7 +43,7 @@ const Container = styled.div`
     padding: 0px 5px;
     color: rgba(255, 255, 255, 0.9);
 
-    font-size: 15px;
+    font-size: calc(var(--fontsize) - 3px);
   }
 
   div {

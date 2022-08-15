@@ -23,7 +23,7 @@ const Name = styled.div`
     max-width: 130px;
     justify-content: flex-end;
 
-    font-size: 16px;   
+    font-size: calc(var(--fontsize) - 2px);   
 
     margin-bottom: 4px; 
   }

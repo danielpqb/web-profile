@@ -42,11 +42,11 @@ const Info = styled.div`
   }
 
   h1 {
-    font-size: 45px;
+    font-size: calc(var(--fontsize) + 27px);
   }
   
   h2 {
-    font-size: 18px;
+    font-size: calc(var(--fontsize) + 0px);
     font-style: italic;
   }
 `
