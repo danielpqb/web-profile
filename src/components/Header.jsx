@@ -83,6 +83,6 @@ const Container = styled.div`
 const Logo = styled.div`
   h1 {
     font-family: 'Silkscreen';
-    font-size: calc(var(--fontsize) + 2px);
+    font-size: 22px;
   }
 `

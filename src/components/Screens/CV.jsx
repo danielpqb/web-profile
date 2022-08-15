@@ -197,19 +197,19 @@ export default function CV() {
 
       <SectionBreaker>Academic Background</SectionBreaker>
       <Text>
-        <h1>IBMEC<em> – RJ, Brazil</em></h1>
+        <h1>IBMEC<em>RJ, Brazil</em></h1>
         <h2>BS Production Engineering</h2>
       </Text>
 
       <SectionBreaker>Professional Experience</SectionBreaker>
       <Text>
-        <h1>Oficina Design<em> – RJ, Brazil</em></h1>
+        <h1>Oficina Design<em>RJ, Brazil</em></h1>
         <h2>Entrepreneur</h2>
       </Text>
       <br />
 
       <Text>
-        <h1>Estúdio OBJ<em> – RJ, Brazil</em></h1>
+        <h1>Estúdio OBJ<em>RJ, Brazil</em></h1>
         <h2>Production Analyst</h2>
         <h3>• Product traceability with the creation and implementation of documents and verification tools.</h3>
         <h3>• Discrimination of the production stages, and elaboration of the quality control of the products by process.</h3>
@@ -220,11 +220,11 @@ export default function CV() {
 
       <SectionBreaker>Courses</SectionBreaker>
       <Text>
-        <h2>BI and Data Warehouse with SQL Server and Power BI<em> – Alura</em></h2><br />
-        <h2>Python for Data Science<em> – Alura</em></h2><br />
-        <h2>Python, C++, SQL and Java<em> – Codecademy, Udemy and W3Schools</em></h2><br />
-        <h2>Fixed Incomes (Treasury bonds, CD and debentures)<em> – XPInvestimentos</em></h2><br />
-        <h2>Master I (English proficiency)<em> – Cultura Inglesa</em></h2>
+        <h4>BI and Data Warehouse with SQL Server and Power BI<em>Alura</em></h4><br />
+        <h4>Python for Data Science<em>Alura</em></h4><br />
+        <h4>Python, C++, SQL and Java<em>Udemy</em></h4><br />
+        <h4>Fixed Incomes (Treasury bonds, CD and debentures)<em>XPI</em></h4><br />
+        <h4>Master I (English proficiency)<em>Cultura <br /> Inglesa</em></h4>
       </Text>
 
       <SectionBreaker>Main Skills</SectionBreaker>
@@ -266,6 +266,13 @@ const Container = styled.div`
       width: calc(100vw - (100vw - 100%));
     }
   }
+
+  em {
+    position: absolute;
+    right: 0;
+
+    font-style: italic;
+  }
 `
 
 const Skills = styled.div`
@@ -276,6 +283,8 @@ const Skills = styled.div`
 
 const Text = styled.div`
   & {
+    position: relative;
+
     flex-direction: column;
     align-items: flex-start;
 
@@ -289,7 +298,7 @@ const Text = styled.div`
     font-family: 'Calibri';
   }
 
-  h1 {
+  h1 {    
     font-size: calc(var(--fontsize) + 6px);
     font-weight: bold;
   }
@@ -300,5 +309,21 @@ const Text = styled.div`
   }
 
   h3 {
+    line-height: 20px;
+    
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font-size: calc(var(--fontsize) + 2px);
+    font-style: italic;
+
+    padding-right: 60px;
+
+    width: 100%;
+    height: 50px;
+    
+    border-bottom: 1px solid white;
   }
 `

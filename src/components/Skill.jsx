@@ -13,7 +13,7 @@ export default function Skill({ skill }) {
 const Container = styled.div`
   & {
     width: fit-content;
-    height: 125px;
+    height: 100px;
 
     margin: 5px;
 
@@ -53,5 +53,11 @@ const Container = styled.div`
   img {
     object-fit: contain;
     padding: 5px;
+  }
+
+  @media (max-width: 1100px) {
+    & {
+      height: 90px;
+    }
   }
 `

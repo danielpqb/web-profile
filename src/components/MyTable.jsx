@@ -63,10 +63,13 @@ const Container = styled.table`
   }
 
   a {
+    font-size: calc(var(--fontsize) - 3px);
+    
     color: rgb(176, 197, 255);
   }
 
   td {
+    font-size: calc(var(--fontsize) - 3px);
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 4px solid rgba(255, 255, 255, 0.7);

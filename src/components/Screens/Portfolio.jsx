@@ -42,7 +42,7 @@ export default function Portfolio() {
           {
             deploy: { name: 'ERP Oficina Design', href: 'https://github.com/danielpqb/ERP-Oficina-Design' },
             repo: { href: 'https://github.com/danielpqb/ERP-Oficina-Design' },
-            description: 'An ERP that controlls invetory, orders, production, clients, providers and products',
+            description: 'An ERP that controlls inventory, orders, production, clients, providers and products',
             techs: [
               'https://img.icons8.com/color/344/microsoft-excel-2019--v1.svg',
               'https://img.icons8.com/color/344/microsoft-access-2019--v1.svg',
