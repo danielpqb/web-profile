@@ -185,7 +185,9 @@ export default function CV() {
 
       <Header />
 
-      <SectionBreaker>Academic Background</SectionBreaker>
+      <h1>Daniel Pereira Queiroz Barros</h1>
+
+      <SectionBreaker first={true}>Academic Background</SectionBreaker>
       <Text>
         <h1>IBMEC<em>RJ, Brazil</em></h1>
         <h2>BS Production Engineering</h2>
@@ -248,6 +250,22 @@ const Container = styled.div`
 
     @media (max-width: 1100px) {
       width: calc(100vw - (100vw - 100%));
+    }
+  }
+
+  & > h1 {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 80px;
+    
+    font-weight: bold;
+    font-size: calc(var(--fontsize) + 26px);
+    
+    text-align: center;
+    
+    @media (max-width: 1100px) {
+      font-size: 5.8vw;
     }
   }
 

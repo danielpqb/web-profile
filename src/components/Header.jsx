@@ -7,7 +7,8 @@ export default function Header() {
 
       <Logo>
         <Link to={'/'}>
-          <h1>Daniel Barros</h1>
+          <ion-icon name='home'></ion-icon>
+          <h1>About me</h1>
         </Link>
       </Logo>
 
@@ -81,8 +82,6 @@ const Container = styled.div`
 `
 
 const Logo = styled.div`
-  h1 {
-    font-family: 'Silkscreen';
-    font-size: 22px;
+  & {
   }
 `

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function SectionBreaker({ children }) {
+export default function SectionBreaker({ children, first }) {
   return (
-    <Container>
+    <Container first={first}>
       {children.toUpperCase()}
     </Container>
   )
@@ -15,7 +15,7 @@ const Container = styled.div`
 
     border-bottom: 4px solid rgba(255, 255, 255, 0.7);
 
-    margin-top: 60px;
+    margin-top: ${({ first }) => first ? '20px' : '60px'};
     margin-bottom: 20px;
     padding: 10px;
 
