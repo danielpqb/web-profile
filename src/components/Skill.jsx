@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Skill({ skill }) {
+export default function Skill({ skill, height, fontSizeOffset }) {
   return (
-    <Container>
+    <Container height={height} fontSizeOffset={fontSizeOffset}>
       <span>{skill.title}</span>
       <div><img src={skill.src} title={skill.title} alt="" /></div>
     </Container>
@@ -13,7 +13,7 @@ export default function Skill({ skill }) {
 const Container = styled.div`
   & {
     width: fit-content;
-    height: 100px;
+    height: ${({ height }) => height + 'px'};
 
     margin: 5px;
 
@@ -43,7 +43,7 @@ const Container = styled.div`
     padding: 0px 5px;
     color: rgba(255, 255, 255, 0.9);
 
-    font-size: calc(var(--fontsize) - 3px);
+    font-size: calc(var(--fontsize) - 3px + ${({ fontSizeOffset }) => fontSizeOffset + 'px'});
   }
 
   div {
@@ -53,11 +53,5 @@ const Container = styled.div`
   img {
     object-fit: contain;
     padding: 5px;
-  }
-
-  @media (max-width: 1100px) {
-    & {
-      height: 90px;
-    }
   }
 `

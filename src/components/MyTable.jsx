@@ -1,41 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Skill from "./Skill"
+
 export default function MyTable({ headers, lines }) {
 
     function writeLine({ deploy, repo, description, techs }, index) {
         return (
-            <tr key={index}>
-                <td>
-                    <a href={deploy.href}>{deploy.name}</a>
-                </td>
-                <td>
-                    <a href={repo.href}>
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </td>
-                <td>{description}</td>
-                <td>
-                    {techs.map((href, index) => {
-                        return <img key={index} src={href} alt="" />
-                    })}
-                </td>
-            </tr>
+            <>
+                <tr key={index}>
+                    <td>
+                        <a href={deploy.href}>
+                            {deploy.name}
+                        </a>
+                    </td>
+                    <td>
+                        <a href={repo.href}>
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </td>
+                    <td>{description}</td>
+                </tr>
+                <tr>
+                    <td colSpan={3}>
+                        <div>
+                            {techs.map((tech, index) => {
+                                return <Skill height={80} fontSizeOffset={-2} skill={tech} key={index} alt="" />
+                            })}
+                        </div>
+                    </td>
+                </tr>
+                <tr></tr>
+            </>
         )
     }
 
     return (
         <Container>
             <table>
-                <tbody>
-                    <tr>
-                        {headers.map((value, index) => { return <th key={index}>{value}</th> })}
-                    </tr>
+                {/* <tr>
+                    {headers.map((value, index) => { return <th key={index}>{value}</th> })}
+                </tr> */}
 
+                <tbody>
                     {lines.map((value, index) => {
                         return writeLine(value, index)
                     })}
-
                 </tbody>
             </table>
         </Container>
@@ -49,13 +59,13 @@ const Container = styled.table`
     width: 100%;
 
     margin: 10px 0px;
+
+    border-collapse:separate;
+    border-spacing:0 5px;
   }
 
-  img {
-    max-width: 34px;
-    max-height: 34px;
-    vertical-align: middle;
-    object-fit: contain;
+  div {
+    flex-wrap: wrap;
   }
 
   ion-icon {
@@ -64,7 +74,7 @@ const Container = styled.table`
 
   a {
     font-size: calc(var(--fontsize) - 3px);
-    
+
     color: rgb(176, 197, 255);
   }
 
@@ -79,5 +89,13 @@ const Container = styled.table`
 
     padding: 8px;
     border-radius: 4px;
+  }
+
+  tr {
+    height: 80px;
+  }
+
+  tbody tr:nth-child(3n) {
+    height: 25px;
   }
 `

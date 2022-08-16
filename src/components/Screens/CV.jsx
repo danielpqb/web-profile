@@ -230,14 +230,14 @@ export default function CV() {
       <SectionBreaker>Main Skills</SectionBreaker>
       <Skills>
         {skills.filter((value) => (value.type === 'main')).map((value, index) => {
-          return <Skill skill={value} alt="" key={index} />
+          return <Skill height={90} skill={value} alt="" key={index} />
         })}
       </Skills>
 
       <SectionBreaker>Other Skills</SectionBreaker>
       <Skills>
         {skills.filter((value) => (value.type === 'other')).map((value, index) => {
-          return <Skill skill={value} alt="" key={index} />
+          return <Skill height={90} skill={value} alt="" key={index} />
         })}
       </Skills>
 
@@ -254,7 +254,7 @@ export default function CV() {
 
 const Container = styled.div`
   & {
-    width: calc(70vw - (100vw - 100%));
+    width: 1100px;
     min-height: 100vh;
 
     flex-direction: column;
