@@ -1,30 +1,62 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export default function Header() {
+
+  const categories = [
+    {
+      link: '/',
+      icon: 'home',
+      name: 'About me'
+    },
+    {
+      link: '/cv',
+      icon: 'newspaper',
+      name: 'CV'
+    },
+    {
+      link: '/portfolio',
+      icon: 'briefcase',
+      name: 'Portfolio'
+    },
+  ]
+
+  const [idSelected, setIdSelected] = useState(0)
+
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case '/':
+        setIdSelected(0)
+        break;
+
+      case '/cv':
+        setIdSelected(1)
+        break;
+
+      case '/portfolio':
+        setIdSelected(2)
+        break;
+
+      default:
+        break;
+    }
+  }, [setIdSelected])
+
   return (
     <Container>
 
-      <Logo>
-        <Link to={'/'}>
-          <ion-icon name='home'></ion-icon>
-          <h1>About me</h1>
-        </Link>
-      </Logo>
-
-      <div>
-        <Link to={'/cv'}>
-          <ion-icon name='newspaper'></ion-icon>
-          <h1>CV</h1>
-        </Link>
-      </div>
-
-      <div>
-        <Link to={'/portfolio'}>
-          <ion-icon name='briefcase'></ion-icon>
-          <h1>Portfolio</h1>
-        </Link>
-      </div>
+      {categories.map((category, index) => {
+        return (
+          <Category id={index} idSelected={idSelected} key={index}>
+            <Link to={category.link}>
+              <ion-icon name={category.icon}></ion-icon>
+              <h1>{category.name}</h1>
+            </Link>
+          </Category>
+        )
+      })
+      }
 
     </Container>
   )
@@ -61,8 +93,6 @@ const Container = styled.div`
     
     width: 100%;
     height: 100%;
-
-    color: white;
   }
 
   ion-icon {
@@ -70,6 +100,7 @@ const Container = styled.div`
     font-size: calc(var(--fontsize) + 12px);
   }
 
+  
   @media (max-width: 1100px) {
     a {
       flex-direction: column;
@@ -79,9 +110,14 @@ const Container = styled.div`
       margin-right: 0px;
     }
   }
-`
+  `
 
-const Logo = styled.div`
-  & {
+const Category = styled.div`
+  & * {
+    color: ${({ idSelected, id }) => idSelected === id ? 'rgb(50, 120, 255)' : 'white'}
+  }
+
+  a {
+    ${({ idSelected, id }) => idSelected === id && 'pointer-events: none'}
   }
 `

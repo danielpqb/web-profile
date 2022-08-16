@@ -78,15 +78,15 @@ export default function Portfolio() {
 
       <SectionBreaker>Github Stats</SectionBreaker>
       <GitStats>
-        <a href="http://www.github.com/danielpqb">
+        <a href="http://www.github.com/danielpqb" target="_blank" rel='noreferrer'>
           <img src="https://github-readme-stats.vercel.app/api?username=danielpqb&amp;show_icons=true&amp;hide=&amp;count_private=true&amp;title_color=3382ed&amp;text_color=ffffff&amp;icon_color=3382ed&amp;bg_color=171717&amp;hide_border=true&amp;show_icons=true" alt="" />
         </a>
 
-        <a href="http://www.github.com/danielpqb">
+        <a href="http://www.github.com/danielpqb" target="_blank" rel='noreferrer'>
           <img src="https://github-readme-streak-stats.herokuapp.com/?user=danielpqb&amp;stroke=ffffff&amp;background=171717&amp;ring=3382ed&amp;fire=3382ed&amp;currStreakNum=ffffff&amp;currStreakLabel=3382ed&amp;sideNums=ffffff&amp;sideLabels=ffffff&amp;dates=ffffff&amp;hide_border=true" alt="" />
         </a>
 
-        <a href="https://github.com/danielpqb">
+        <a href="https://github.com/danielpqb" target="_blank" rel='noreferrer'>
           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=danielpqb&amp;layout=compact&amp;title_color=3382ed&amp;text_color=ffffff&amp;icon_color=3382ed&amp;bg_color=171717&amp;hide_border=true&amp;locale=en&amp;custom_title=Top%20%Languages" alt="" />
         </a>
       </GitStats>

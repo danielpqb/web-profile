@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Main from './Main'
 import Techs from './Techs'
 
-export default function Table({ projects }) {
+export default function ProjectsTable({ projects }) {
 
   function writeProject({ deploy, repo, description, techs }, index) {
     return (

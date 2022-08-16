@@ -29,10 +29,10 @@ export default function Techs({ techs }) {
 };
 
 const Container = styled.tr`
-  & {
-
+  &:hover {
+    cursor: pointer;
   }
-  
+
   div {
     flex-wrap: wrap;
   }

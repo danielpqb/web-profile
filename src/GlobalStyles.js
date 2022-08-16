@@ -5,6 +5,15 @@ export const GlobalStyle = createGlobalStyle`
     --fontsize: 18px;
   }
 
+  /* Hide scrollbar */
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   * {
     background: none;
     border: none;

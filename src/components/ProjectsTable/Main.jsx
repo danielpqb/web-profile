@@ -5,12 +5,12 @@ export default function Main({ deploy, repo, description }) {
   return (
     <Container>
       <td>
-        <a href={deploy.href}>
+        <a href={deploy.href} target="_blank" rel='noreferrer'>
           {deploy.name}
         </a>
       </td>
       <td>
-        <a href={repo.href}>
+        <a href={repo.href} target="_blank" rel='noreferrer'>
           <ion-icon name="logo-github"></ion-icon>
         </a>
       </td>
