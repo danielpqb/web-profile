@@ -7,8 +7,7 @@ export default function Techs({ techs }) {
   const [hidden, setHidden] = useState(true)
 
   return (
-
-    <Container onClick={() => { setHidden(!hidden) }}>
+    <Container onClick={() => { setHidden(!hidden) }} isHidden={hidden}>
       <td colSpan={3}>
         {hidden === false ?
           <Tech>
@@ -24,7 +23,6 @@ export default function Techs({ techs }) {
         }
       </td>
     </Container>
-
   )
 };
 
@@ -34,6 +32,7 @@ const Container = styled.tr`
   
   &:hover {
     cursor: pointer;
+    opacity: ${({ isHidden }) => isHidden ? '0.6' : '1'};
   }
   
   div {
@@ -58,7 +57,5 @@ const Container = styled.tr`
 
 const Tech = styled.div`
   & {
-    transition: all 1s;
-    transform: scale(1);
   }
 `
