@@ -11,13 +11,7 @@ export default function Portfolio() {
 
       <SectionBreaker>Projects</SectionBreaker>
       <MyTable
-        headers={[
-          'Name',
-          '',
-          'Description',
-        ]}
-
-        lines={[
+        projects={[
           {
             deploy: { name: 'Slimeland', href: 'https://danielpqb.github.io/my-first-web-game/' },
             repo: { href: 'https://github.com/danielpqb/my-first-web-game' },

@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 import Skill from "./Skill"
 
-export default function MyTable({ headers, lines }) {
+export default function MyTable({ projects }) {
 
-    function writeLine({ deploy, repo, description, techs }, index) {
+    function writeProject({ deploy, repo, description, techs }, index) {
         return (
             <>
-                <tr key={index}>
+                <MainContent key={index}>
                     <td>
                         <a href={deploy.href}>
                             {deploy.name}
@@ -20,8 +20,9 @@ export default function MyTable({ headers, lines }) {
                         </a>
                     </td>
                     <td>{description}</td>
-                </tr>
-                <tr>
+                </MainContent>
+
+                <Techs>
                     <td colSpan={3}>
                         <div>
                             {techs.map((tech, index) => {
@@ -29,53 +30,27 @@ export default function MyTable({ headers, lines }) {
                             })}
                         </div>
                     </td>
-                </tr>
-                <tr></tr>
+                </Techs>
+
+                <BlankSpace></BlankSpace>
             </>
         )
     }
 
     return (
         <Container>
-            <table>
-                {/* <tr>
-                    {headers.map((value, index) => { return <th key={index}>{value}</th> })}
-                </tr> */}
-
-                <tbody>
-                    {lines.map((value, index) => {
-                        return writeLine(value, index)
-                    })}
-                </tbody>
-            </table>
-        </Container>
+            <tbody>
+                {projects.map((value, index) => {
+                    return writeProject(value, index)
+                })}
+            </tbody>
+        </Container >
     )
 };
 
 const Container = styled.table`
   & {
-    display: grid;
-    border-collapse: collapse;
     width: 100%;
-
-    margin: 10px 0px;
-
-    border-collapse:separate;
-    border-spacing:0 5px;
-  }
-
-  div {
-    flex-wrap: wrap;
-  }
-
-  ion-icon {
-    font-size: calc(var(--fontsize) + 12px);
-  }
-
-  a {
-    font-size: calc(var(--fontsize) - 3px);
-
-    color: rgb(176, 197, 255);
   }
 
   td {
@@ -90,12 +65,35 @@ const Container = styled.table`
     padding: 8px;
     border-radius: 4px;
   }
+`
 
-  tr {
-    height: 80px;
+const MainContent = styled.tr`
+  & {
+    height: 70px;
   }
 
-  tbody tr:nth-child(3n) {
+  a {
+    font-size: calc(var(--fontsize) - 3px);
+    color: rgb(176, 197, 255);
+  }
+
+  ion-icon {
+    font-size: calc(var(--fontsize) + 12px);
+  }
+`
+
+const Techs = styled.tr`
+  & {
+    
+  }
+
+  div {
+    flex-wrap: wrap;
+  }
+`
+
+const BlankSpace = styled.tr`
+  & {
     height: 25px;
   }
 `
