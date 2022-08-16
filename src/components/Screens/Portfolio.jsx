@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import Header from "../Header"
-import MyTable from "../MyTable"
+import ProjectsTable from "../ProjectsTable/ProjectsTable"
 import SectionBreaker from "../SectionBreaker"
 
 export default function Portfolio() {
@@ -10,7 +10,7 @@ export default function Portfolio() {
       <Header />
 
       <SectionBreaker>Projects</SectionBreaker>
-      <MyTable
+      <ProjectsTable
         projects={[
           {
             deploy: { name: 'Slimeland', href: 'https://danielpqb.github.io/my-first-web-game/' },
