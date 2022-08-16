@@ -9,9 +9,40 @@ export default function Portfolio() {
     <Container>
       <Header />
 
-      <SectionBreaker>Projects</SectionBreaker>
+      <SectionBreaker first={true}>Projects</SectionBreaker>
       <ProjectsTable
         projects={[
+          {
+            deploy: { name: 'Cineflex', href: 'https://projeto-03-cineflex.vercel.app/' },
+            repo: { href: 'https://github.com/danielpqb/projeto-03-cineflex' },
+            description: 'A React Web App to select movies and buy tickets',
+            techs: [
+              {
+                title: 'React',
+                src: 'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg',
+              },
+              {
+                title: 'NodeJS',
+                src: 'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg',
+              },
+              {
+                title: 'npm',
+                src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg',
+              },
+              {
+                title: 'JavaScript',
+                src: 'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg',
+              },
+              {
+                title: 'HTML5',
+                src: 'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg',
+              },
+              {
+                title: 'CSS3',
+                src: 'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg',
+              },
+            ]
+          },
           {
             deploy: { name: 'Slimeland', href: 'https://danielpqb.github.io/my-first-web-game/' },
             repo: { href: 'https://github.com/danielpqb/my-first-web-game' },
@@ -108,6 +139,7 @@ const Container = styled.div`
     justify-content: flex-start;
 
     padding: 20px;
+    padding-top: 90px;
 
     @media (max-width: 1100px) {
       width: calc(100vw - (100vw - 100%));

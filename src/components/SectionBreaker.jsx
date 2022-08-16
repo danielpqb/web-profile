@@ -15,7 +15,7 @@ const Container = styled.div`
 
     border-bottom: 4px solid rgba(255, 255, 255, 0.7);
 
-    margin-top: ${({ first }) => first ? '20px' : '60px'};
+    margin-top: ${({ first }) => first ? '0px' : '40px'};
     margin-bottom: 20px;
     padding: 10px;
 

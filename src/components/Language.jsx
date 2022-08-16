@@ -33,7 +33,7 @@ const KnowledgeBar = styled.div`
   & {
     justify-content: flex-start;
 
-    background-color: rgba(130, 140, 230, 0.2);
+    background-color: rgba(130, 140, 230, 0.05);
 
     height: 10px;
     width: 40%;

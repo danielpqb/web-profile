@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import Header from "../Header"
+import HideContainer from "../HideContainer"
 import Language from "../Language"
 import SectionBreaker from "../SectionBreaker"
 import Skill from "../Skill"
@@ -204,7 +205,6 @@ export default function CV() {
         <h1>Estúdio OBJ<em>RJ, Brazil</em></h1>
         <h2>Production Analyst</h2>
       </Text>
-      <br />
 
       <SectionBreaker>Courses</SectionBreaker>
       <Text>
@@ -214,18 +214,18 @@ export default function CV() {
       </Text>
 
       <SectionBreaker>High Level Skills</SectionBreaker>
-      <Skills>
+      <HideContainer>
         {skills.filter((value) => (value.type === 'high')).map((value, index) => {
           return <Skill height={90} skill={value} alt="" key={index} />
         })}
-      </Skills>
+      </HideContainer>
 
       <SectionBreaker>Secondary Skills</SectionBreaker>
-      <Skills>
+      <HideContainer>
         {skills.filter((value) => (value.type !== 'high')).map((value, index) => {
           return <Skill height={90} skill={value} alt="" key={index} />
         })}
-      </Skills>
+      </HideContainer>
 
       <SectionBreaker>Languages</SectionBreaker>
       <Language level={80}>English</Language>
@@ -247,6 +247,7 @@ const Container = styled.div`
     justify-content: flex-start;
 
     padding: 20px;
+    padding-top: 90px;
 
     @media (max-width: 1100px) {
       width: calc(100vw - (100vw - 100%));
@@ -256,8 +257,8 @@ const Container = styled.div`
   & > h1 {
     display: flex;
     justify-content: center;
-    
-    margin-top: 80px;
+
+    margin-bottom: 10px;
     
     font-weight: bold;
     font-size: calc(var(--fontsize) + 26px);
@@ -274,12 +275,6 @@ const Container = styled.div`
     right: 0;
 
     font-style: italic;
-  }
-`
-
-const Skills = styled.div`
-  & {
-    flex-wrap: wrap;
   }
 `
 

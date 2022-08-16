@@ -6,14 +6,16 @@ import Techs from './Techs'
 
 export default function ProjectsTable({ projects }) {
 
-  function writeProject({ deploy, repo, description, techs }, index) {
+  function writeProject({ deploy, repo, description, techs }, index, isLast) {
     return (
       <Fragment key={index}>
         <Main deploy={deploy} repo={repo} description={description} />
 
         <Techs techs={techs} />
 
-        <BlankSpace></BlankSpace>
+        {!isLast &&
+          <BlankSpace></BlankSpace>
+        }
       </Fragment>
     )
   }
@@ -21,8 +23,9 @@ export default function ProjectsTable({ projects }) {
   return (
     <Container>
       <tbody>
-        {projects.map((value, index) => {
-          return writeProject(value, index)
+        {projects.map((project, index) => {
+          const isLast = index === projects.length - 1
+          return writeProject(project, index, isLast)
         })}
       </tbody>
     </Container >

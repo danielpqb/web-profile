@@ -10,17 +10,17 @@ export default function Techs({ techs }) {
 
     <Container onClick={() => { setHidden(!hidden) }}>
       <td colSpan={3}>
-        {!hidden ?
-          <div>
+        {hidden === false ?
+          <Tech>
             {techs.map((tech, index) => {
               return <Skill height={80} fontSizeOffset={-2} skill={tech} key={index} alt="" />
             })}
-          </div>
+          </Tech>
           :
-          <div>
+          <Tech>
             <ion-icon name="chevron-down-outline"></ion-icon>
             <h1>Techs</h1>
-          </div>
+          </Tech>
         }
       </td>
     </Container>
@@ -29,26 +29,36 @@ export default function Techs({ techs }) {
 };
 
 const Container = styled.tr`
+  & {
+  }
+  
   &:hover {
     cursor: pointer;
   }
-
+  
   div {
     flex-wrap: wrap;
   }
-
+  
   h1 {
     font-size: calc(var(--fontsize) - 3px);
   }
-
+  
   ion-icon {
     margin-right: 5px;
     font-size: 20px;
   }
-
+  
   && td {
     border-top: none;
     padding: 0px;
     border-radius: 0px 0px 4px 4px;
+  }
+  `
+
+const Tech = styled.div`
+  & {
+    transition: all 1s;
+    transform: scale(1);
   }
 `
