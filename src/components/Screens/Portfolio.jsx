@@ -79,6 +79,10 @@ export default function Portfolio() {
                 title: 'JupyterNotebook',
                 src: 'https://raw.githubusercontent.com/jupyter/notebook/984eefc2a713fad3431427f51ee2a5eda9b47cc1/jupyter.svg',
               },
+              {
+                title: 'Anaconda',
+                src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/anaconda/anaconda-original.svg',
+              },
             ]
           },
           {
@@ -96,11 +100,11 @@ export default function Portfolio() {
               },
               {
                 title: 'VBA',
-                src: 'https://icon-library.com/images/vba-icon/vba-icon-10.jpg',
+                src: 'https://icons-for-free.com/iconfiles/png/512/vscode+icons+type+vba-1324451511940031054.png',
               },
               {
                 title: 'SQL',
-                src: 'https://img.icons8.com/external-soft-fill-juicy-fish/344/external-sql-coding-and-development-soft-fill-soft-fill-juicy-fish.png',
+                src: 'https://cdn-icons-png.flaticon.com/512/3161/3161158.png',
               },
             ]
           },

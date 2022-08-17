@@ -214,7 +214,7 @@ export default function CV() {
       </Text>
 
       <SectionBreaker>High Level Skills</SectionBreaker>
-      <HideContainer>
+      <HideContainer startHidden={false}>
         {skills.filter((value) => (value.type === 'high')).map((value, index) => {
           return <Skill height={90} skill={value} alt="" key={index} />
         })}

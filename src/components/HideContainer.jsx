@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-export default function HideContainer({ children, name }) {
+export default function HideContainer({ children, name, startHidden = true }) {
 
-    const [hidden, setHidden] = useState(true)
+    const [hidden, setHidden] = useState(startHidden)
 
     return (
         <Container onClick={() => { setHidden(!hidden) }} hidden={hidden}>
