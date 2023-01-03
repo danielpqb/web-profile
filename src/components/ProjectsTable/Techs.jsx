@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Skill from '../Skill'
 
 export default function Techs({ techs }) {
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(true)
 
   return (
     <Container onClick={() => { setHidden(!hidden) }} isHidden={hidden}>
@@ -53,7 +53,7 @@ const Container = styled.tr`
     padding: 0px;
     border-radius: 0px 0px 4px 4px;
   }
-  `
+`
 
 const Tech = styled.div`
   & {

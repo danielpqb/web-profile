@@ -1,40 +1,63 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
+import React, { Fragment } from "react";
+import styled from "styled-components";
 
-import Main from './Main'
-import Techs from './Techs'
+import Main from "./Main";
+import PreviewVideo from "./PreviewVideo";
+import Techs from "./Techs";
 
 export default function ProjectsTable({ projects }) {
-
   function writeProject({ deploy, repo, description, techs }, index, isLast) {
     return (
       <Fragment key={index}>
-        <Main deploy={deploy} repo={repo} description={description} />
+        <Main
+          deploy={deploy}
+          repo={repo}
+          description={description}
+        />
+
+        <PreviewVideo />
 
         <Techs techs={techs} />
 
-        {!isLast &&
-          <BlankSpace></BlankSpace>
-        }
+        {!isLast && <BlankSpace></BlankSpace>}
       </Fragment>
-    )
+    );
   }
 
   return (
     <Container>
       <tbody>
         {projects.map((project, index) => {
-          const isLast = index === projects.length - 1
-          return writeProject(project, index, isLast)
+          const isLast = index === projects.length - 1;
+          if (!(index % 2)) {
+            return writeProject(project, index, isLast);
+          }
+          return <Fragment key={index} />;
         })}
       </tbody>
-    </Container >
-  )
-};
+      <tbody>
+        {projects.map((project, index) => {
+          const isLast = index === projects.length - 1;
+          if (index % 2) {
+            return writeProject(project, index, isLast);
+          }
+          return <Fragment key={index} />;
+        })}
+      </tbody>
+    </Container>
+  );
+}
 
 const Container = styled.table`
   & {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+    @media (orientation: portrait) {
+      grid-template-columns: 1fr;
+    }
   }
 
   td {
@@ -49,10 +72,10 @@ const Container = styled.table`
     padding: 8px;
     border-radius: 4px;
   }
-`
+`;
 
 const BlankSpace = styled.tr`
   & {
     height: 25px;
   }
-`
+`;

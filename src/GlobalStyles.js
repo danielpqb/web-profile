@@ -1,8 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
     --fontsize: 18px;
+    --doc-height: 100%;
+  }
+
+  html,
+  body {
+    height: var(--doc-heigth);
   }
 
   /* Hide scrollbar */
