@@ -16,6 +16,7 @@ export default function Portfolio() {
             deploy: { name: 'Cineflex', href: 'https://projeto-03-cineflex.vercel.app/' },
             repo: { href: 'https://github.com/danielpqb/projeto-03-cineflex' },
             description: 'A React Web App to select movies and buy tickets',
+            src: "videos/cineflex.mkv",
             techs: [
               {
                 title: 'React',
@@ -47,6 +48,7 @@ export default function Portfolio() {
             deploy: { name: 'Slimeland', href: 'https://danielpqb.github.io/my-first-web-game/' },
             repo: { href: 'https://github.com/danielpqb/my-first-web-game' },
             description: 'An RPG game on your web browser',
+            src: "videos/slimeland.mkv",
             techs: [
               {
                 title: 'JavaScript',
@@ -66,6 +68,8 @@ export default function Portfolio() {
             deploy: { name: 'Enem 2019', href: 'https://github.com/danielpqb/Enem2019' },
             repo: { href: 'https://github.com/danielpqb/Enem2019' },
             description: 'An analysis of brazilian students performance on Enem 2019',
+            src: "images/enem2019.png",
+            srcIsImage: true,
             techs: [
               {
                 title: 'PowerBI',
@@ -89,6 +93,7 @@ export default function Portfolio() {
             deploy: { name: 'ERP Oficina', href: 'https://github.com/danielpqb/ERP-Oficina-Design' },
             repo: { href: 'https://github.com/danielpqb/ERP-Oficina-Design' },
             description: 'An ERP that controlls inventory, orders, production, clients, providers and products',
+            src: "",
             techs: [
               {
                 title: 'Excel',

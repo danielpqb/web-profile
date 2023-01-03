@@ -2,11 +2,15 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import Main from "./Main";
-import PreviewVideo from "./PreviewVideo";
 import Techs from "./Techs";
+import Preview from "./Preview";
 
 export default function ProjectsTable({ projects }) {
-  function writeProject({ deploy, repo, description, techs }, index, isLast) {
+  function writeProject(
+    { deploy, repo, description, techs, src, srcIsImage },
+    index,
+    isLast
+  ) {
     return (
       <Fragment key={index}>
         <Main
@@ -15,7 +19,11 @@ export default function ProjectsTable({ projects }) {
           description={description}
         />
 
-        <PreviewVideo />
+        <Preview
+          src={src}
+          srcIsImage={srcIsImage}
+          deploy={deploy}
+        />
 
         <Techs techs={techs} />
 
@@ -50,13 +58,12 @@ export default function ProjectsTable({ projects }) {
 
 const Container = styled.table`
   & {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 
     @media (orientation: portrait) {
-      grid-template-columns: 1fr;
+      display: table;
     }
   }
 
