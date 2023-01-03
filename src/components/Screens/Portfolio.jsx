@@ -42,25 +42,13 @@ export default function Portfolio() {
           },
           {
             deploy: {
-              name: "Cineflex",
-              href: "https://projeto-03-cineflex.vercel.app/",
+              name: "Slimeland",
+              href: "https://danielpqb.github.io/my-first-web-game/",
             },
-            repo: { href: "https://github.com/danielpqb/projeto-03-cineflex" },
-            description: "A React Web App to select movies and buy tickets",
-            src: "videos/cineflex.mkv",
+            repo: { href: "https://github.com/danielpqb/my-first-web-game" },
+            description: "An RPG game on your web browser",
+            src: "videos/slimeland.mkv",
             techs: [
-              {
-                title: "React",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
-              },
-              {
-                title: "NodeJS",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg",
-              },
-              {
-                title: "npm",
-                src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg",
-              },
               {
                 title: "JavaScript",
                 src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg",
@@ -77,13 +65,21 @@ export default function Portfolio() {
           },
           {
             deploy: {
-              name: "Slimeland",
-              href: "https://danielpqb.github.io/my-first-web-game/",
+              name: "Cineflex",
+              href: "https://projeto-03-cineflex.vercel.app/",
             },
-            repo: { href: "https://github.com/danielpqb/my-first-web-game" },
-            description: "An RPG game on your web browser",
-            src: "videos/slimeland.mkv",
+            repo: { href: "https://github.com/danielpqb/projeto-03-cineflex" },
+            description: "A React Web App to select movies and buy tickets",
+            src: "videos/cineflex.mkv",
             techs: [
+              {
+                title: "React",
+                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
+              },
+              {
+                title: "NodeJS",
+                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg",
+              },
               {
                 title: "JavaScript",
                 src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg",
