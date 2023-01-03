@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Skill from '../Skill'
 
 export default function Techs({ techs }) {
-  const [hidden, setHidden] = useState(true)
+  const [hidden, setHidden] = useState(false)
 
   return (
     <Container onClick={() => { setHidden(!hidden) }} isHidden={hidden}>
