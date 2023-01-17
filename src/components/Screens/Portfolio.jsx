@@ -4,155 +4,23 @@ import Header from "../Header";
 import ProjectsTable from "../ProjectsTable/ProjectsTable";
 import SectionBreaker from "../SectionBreaker";
 
+import { pinned } from "../../data/projects/pinned";
+import { others } from "../../data/projects/others";
+import { libs } from "../../data/projects/libs";
+
 export default function Portfolio() {
   return (
     <Container>
       <Header />
 
-      <SectionBreaker first={true}>Projects</SectionBreaker>
-      <ProjectsTable
-        projects={[
-          {
-            deploy: { name: "Mathify", href: "https://mathify.vercel.app/" },
-            repo: { href: "https://github.com/danielpqb/mathify-front" },
-            description: "A web app to enhance your math skills",
-            src: "videos/mathify.mkv",
-            techs: [
-              {
-                title: "TypeScript",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg",
-              },
-              {
-                title: "React",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
-              },
-              {
-                title: "NodeJS",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg",
-              },
-              {
-                title: "HTML5",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg",
-              },
-              {
-                title: "CSS3",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg",
-              },
-            ],
-          },
-          {
-            deploy: {
-              name: "Slimeland",
-              href: "https://danielpqb.github.io/my-first-web-game/",
-            },
-            repo: { href: "https://github.com/danielpqb/my-first-web-game" },
-            description: "An RPG game on your web browser",
-            src: "videos/slimeland.mkv",
-            techs: [
-              {
-                title: "JavaScript",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg",
-              },
-              {
-                title: "HTML5",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg",
-              },
-              {
-                title: "CSS3",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg",
-              },
-            ],
-          },
-          {
-            deploy: {
-              name: "Cineflex",
-              href: "https://projeto-03-cineflex.vercel.app/",
-            },
-            repo: { href: "https://github.com/danielpqb/projeto-03-cineflex" },
-            description: "A React Web App to select movies and buy tickets",
-            src: "videos/cineflex.mkv",
-            techs: [
-              {
-                title: "React",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
-              },
-              {
-                title: "NodeJS",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg",
-              },
-              {
-                title: "JavaScript",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg",
-              },
-              {
-                title: "HTML5",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg",
-              },
-              {
-                title: "CSS3",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg",
-              },
-            ],
-          },
-          {
-            deploy: {
-              name: "Enem 2019",
-              href: "https://github.com/danielpqb/Enem2019",
-            },
-            repo: { href: "https://github.com/danielpqb/Enem2019" },
-            description:
-              "An analysis of brazilian students performance on Enem 2019",
-            src: "images/enem2019.png",
-            srcIsImage: true,
-            techs: [
-              {
-                title: "PowerBI",
-                src: "https://raw.githubusercontent.com/microsoft/PowerBI-Icons/b76704a375ae550a08e627ab148945e6eee3d0d6/SVG/Power-BI.svg",
-              },
-              {
-                title: "Python",
-                src: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg",
-              },
-              {
-                title: "JupyterNotebook",
-                src: "https://raw.githubusercontent.com/jupyter/notebook/984eefc2a713fad3431427f51ee2a5eda9b47cc1/jupyter.svg",
-              },
-              {
-                title: "Anaconda",
-                src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/anaconda/anaconda-original.svg",
-              },
-            ],
-          },
-          {
-            deploy: {
-              name: "ERP Oficina",
-              href: "https://github.com/danielpqb/ERP-Oficina-Design",
-            },
-            repo: { href: "https://github.com/danielpqb/ERP-Oficina-Design" },
-            description:
-              "An ERP that controlls inventory, orders, production, clients, providers and products",
-            src: "",
-            techs: [
-              {
-                title: "Excel",
-                src: "https://img.icons8.com/color/344/microsoft-excel-2019--v1.svg",
-              },
-              {
-                title: "Access",
-                src: "https://img.icons8.com/color/344/microsoft-access-2019--v1.svg",
-              },
-              {
-                title: "VBA",
-                src: "https://icons-for-free.com/iconfiles/png/512/vscode+icons+type+vba-1324451511940031054.png",
-              },
-              {
-                title: "SQL",
-                src: "https://cdn-icons-png.flaticon.com/512/3161/3161158.png",
-              },
-            ],
-          },
-        ]}
-      />
+      <SectionBreaker first={true}>Proudest Projects</SectionBreaker>
+      <ProjectsTable projects={pinned} />
+
+      <SectionBreaker first={true}>NPM Libraries</SectionBreaker>
+      <ProjectsTable projects={libs} />
+      
+      <SectionBreaker first={true}>Others</SectionBreaker>
+      <ProjectsTable projects={others} />
 
       <SectionBreaker>Github Stats</SectionBreaker>
       <GitStats>

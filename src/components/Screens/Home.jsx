@@ -13,7 +13,7 @@ export default function Home() {
       <Info>
         <ProfilePhoto />
         <h1>Daniel P. Q. Barros</h1>
-        <h2>Full Stack Software Engineer Developer</h2>
+        <h2>Full Stack Software Engineer</h2>
         <ContactLinks />
       </Info>
     </Container>

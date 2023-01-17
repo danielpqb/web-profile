@@ -27,7 +27,7 @@ export default function ProjectsTable({ projects }) {
 
         <Techs techs={techs} />
 
-        {!isLast && <BlankSpace></BlankSpace>}
+        <BlankSpace></BlankSpace>
       </Fragment>
     );
   }
@@ -61,10 +61,6 @@ const Container = styled.table`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-
-    @media (orientation: portrait) {
-      display: table;
-    }
   }
 
   td {
@@ -78,6 +74,17 @@ const Container = styled.table`
 
     padding: 8px;
     border-radius: 4px;
+  }
+
+  @media (orientation: portrait) {
+    & {
+      display: table;
+    }
+    tbody {
+      gap: 25px;
+      margin: 0px 0px;
+      padding: 0px 0px;
+    }
   }
 `;
 
