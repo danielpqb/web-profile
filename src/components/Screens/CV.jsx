@@ -14,7 +14,7 @@ export default function CV() {
     <Container>
       <Header />
 
-      <h1>Daniel Pereira Queiroz Barros</h1>
+      {/* <h1>Daniel Pereira Queiroz Barros</h1>
 
       <SectionBreaker first={true}>Academic Background</SectionBreaker>
       <Text>
@@ -56,9 +56,9 @@ export default function CV() {
             Cultura <br /> Inglesa
           </em>
         </h4>
-      </Text>
+      </Text> */}
 
-      <SectionBreaker>Main Skills</SectionBreaker>
+      <SectionBreaker first={true}>Main Skills</SectionBreaker>
       <HideContainer startHidden={false}>
         {mainSkills
           .map((value, index) => {

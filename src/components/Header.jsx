@@ -13,7 +13,7 @@ export default function Header() {
     {
       link: '/cv',
       icon: 'newspaper',
-      name: 'CV'
+      name: 'Skills'
     },
     {
       link: '/portfolio',
